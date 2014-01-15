@@ -17,7 +17,7 @@ namespace MyStuff
 
         public string ToSum(int num1, int num2)
         {
-            return (num1 + num2).ToString(CultureInfo.InvariantCulture);
+            return string.Format("Sum of {0} and {1} = {2}", num1, num2, num1 + num2);
         }
     }
 }
