@@ -1,9 +1,51 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Simple WebApi2 :: without asp.net MVC framework</title>
 </head>
-<body>
 
+<body>
+    <div id="allEmployees">
+        <h2>Employees List</h2>
+        <ul id="employees" ></ul>
+    </div>
+
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="empId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="employee" ></p>
+    </div>
+
+    <script src="Scripts/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = 'api/employees';
+
+        $(document).ready(function () {
+
+            $.getJSON(uri)
+                .done(function (data) {
+
+                    $.each(data, function (key, item) {
+
+                        $('<li>', { text: formatItem(item) }).appendTo($('#employees'));
+                    });
+                });
+        });
+
+        function formatItem(item) {
+            return item.FirstName + ' ' + item.MiddleName + ' ' + item.LastName + ' ' + item.Title + ' ' + item.DepartmentName;
+        }
+        function find() {
+            var id = $('#empId').val();
+            $.getJSON(uri + '/' + id)
+                .done(function (data) {
+                    $('#employee').text(formatItem(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#employee').text('Error: ' + err);
+                });
+        }
+    </script>
 </body>
 </html>
