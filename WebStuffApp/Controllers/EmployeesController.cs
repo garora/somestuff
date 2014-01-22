@@ -35,20 +35,39 @@ namespace WebStuffApp.Controllers
                 },
                 new Employee
                 {
-                    Id = 1,
+                    Id = 2,
                     FirstName = "Shuby",
+                    MiddleName = "",
                     LastName = "Arora",
                     DepartmentName = "Research & Development",
                     Title = "Sr. Scientist"
                 },
                 new Employee
                 {
-                    Id = 1,
+                    Id = 3,
                     FirstName = "Gaurav",
                     MiddleName = "Kumar",
                     LastName = "Arora",
                     DepartmentName = "Solutions",
                     Title = "Project Leader"
+                },
+                new Employee
+                {
+                    Id = 4,
+                    FirstName = "Anil",
+                    MiddleName = "Kumar",
+                    LastName = "Pandey",
+                    DepartmentName = "Software",
+                    Title = "Technical Leader"
+                },
+                new Employee
+                {
+                    Id = 5,
+                    FirstName = "Ram",
+                    MiddleName = "Nath",
+                    LastName = "Rao",
+                    DepartmentName = "Web Air",
+                    Title = "Development Manager"
                 }
 
             };
