@@ -10,14 +10,14 @@ namespace MyStuff
             return textToUpper.ToUpper(CultureInfo.InvariantCulture);
         }
 
-        public string FormatMe(int num)
+        public string FormatMe(int number)
         {
-            return String.Format("You entered {0}.", num);
+            return String.Format("You entered {0}.", number);
         }
 
-        public string ToSum(int num1, int num2)
+        public string ToSum(int firstNumber, int secondNumber)
         {
-            return string.Format("Sum of {0} and {1} = {2}", num1, num2, num1 + num2);
+            return string.Format("Sum of {0} and {1} = {2}", firstNumber, secondNumber, firstNumber + secondNumber);
         }
     }
 }

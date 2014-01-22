@@ -3,7 +3,7 @@
     public interface IWithoutFuncType
     {
         string ToUpper(string textToUpper);
-        string FormatMe(int num);
-        string ToSum(int num1, int num2);
+        string FormatMe(int number);
+        string ToSum(int firstNumber, int secondNumber);
     }
 }

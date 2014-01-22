@@ -46,7 +46,7 @@ namespace MyStuff
 
         }
 
-        private static List<FullName> GetSomeFullNames()
+        private static IEnumerable<FullName> GetSomeFullNames()
         {
             return new List<FullName>
             {

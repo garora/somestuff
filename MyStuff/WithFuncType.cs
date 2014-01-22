@@ -12,14 +12,14 @@ namespace MyStuff
         readonly Func<int, string> _formatMe = n => string.Format("You entered {0}", n);
         readonly Func<int, int, string> _toSum = (n, m) => string.Format("Sum of {0} and {1} = {2}", n, m, n + m);
 
-        public string FormatNumberAndMakeToUpper(int num)
+        public string FormatNumberAndMakeToUpper(int number)
         {
-            return MakeMeInUpperCase(_formatMe.Invoke(num));
+            return MakeMeInUpperCase(_formatMe.Invoke(number));
         }
 
-        public string GiveMeSumInDefinedFormat(int num1, int num2)
+        public string GiveMeSumInDefinedFormat(int firstNumber, int secondNumber)
         {
-            return _toSum.Invoke(num1, num2);
+            return _toSum.Invoke(firstNumber, secondNumber);
         }
 
         public string MakeMeInUpperCase(string stringToUpper)
