@@ -8,5 +8,10 @@ namespace EmployeeData.Models
 {
     interface IEmployeeRepository
     {
+        IEnumerable<Employee> GetAll();
+        Employee Get(int empId);
+        Employee Add(Employee employee);
+        void Remove(int empId);
+        bool Update(Employee employee);
     }
 }
