@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeData.Models
 {
-    interface IEmployeeRepository
+    public interface IEmployeeRepository
     {
         IEnumerable<Employee> GetAll();
         Employee Get(int empId);
