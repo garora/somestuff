@@ -42,7 +42,7 @@ namespace EmployeeData.Models
                 throw new ArgumentNullException("employee");
             }
 
-            var index = _employees.FindIndex(p => p.Id == item.Id);
+            var index = _employees.FindIndex(p => p.Id == employee.Id);
             
             if (index == -1)
             {
