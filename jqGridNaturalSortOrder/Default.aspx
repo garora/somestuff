@@ -1,0 +1,73 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="jqGridNaturalSortOrder._Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Natural Sort Order</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="Content/themes/base/jquery.ui.theme.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Content/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Content/jquery.jqGrid/ui.jqgrid.css" />
+
+    <script src="Scripts/jquery-2.1.0.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.10.4.min.js" type="text/javascript"></script>
+    <!-- The localization file we need, English in this case -->
+    <script src="Scripts/i18n/grid.locale-en.js" type="text/javascript"></script>
+
+
+    <!-- The jqGrid client-side javascript -->
+    <script src="Scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+    <script src="Scripts/naturalSort.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#list4").jqGrid({
+                datatype: "local",
+                height: 250,
+                colNames: ['Inv No', 'Date', 'Natural Sort order', 'Amount', 'Tax', 'Total', 'String Sort'],
+                colModel: [{ name: 'id', index: 'id', width: 60, sorttype: "int" },
+                { name: 'invdate', index: 'invdate', width: 90, sorttype: "date" },
+                { name: 'name', index: 'name', width: 150, sortfunc: naturalSort },
+                { name: 'amount', index: 'amount', width: 80, align: "right", sorttype: "float" },
+                { name: 'tax', index: 'tax', width: 80, align: "right", sorttype: "float" },
+                { name: 'total', index: 'total', width: 80, align: "right", sorttype: "float" },
+                { name: 'note', index: 'note', width: 150, sortable: "string" }],
+
+                multiselect: true,
+                caption: "NaturalSortOrder using jqrid"
+            });
+
+            var mydata = [
+            { id: "1", invdate: "2013-10-01", name: "atest", note: "atest", amount: "200.00", tax: "10.00", total: "210.00" },
+            { id: "2", invdate: "2013-10-02", name: "Atest", note: "Atest", amount: "300.00", tax: "20.00", total: "320.00" },
+            { id: "3", invdate: "2013-09-01", name: "test2", note: "test2", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "4", invdate: "2013-10-04", name: "test", note: "test", amount: "200.00", tax: "10.00", total: "210.00" },
+            { id: "5", invdate: "2013-10-05", name: "test2A", note: "test2A", amount: "300.00", tax: "20.00", total: "320.00" },
+            { id: "6", invdate: "2013-09-06", name: "test2a", note: "test2a", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "7", invdate: "2013-10-04", name: "Test", note: "Test", amount: "200.00", tax: "10.00", total: "210.00" },
+            { id: "8", invdate: "2013-10-03", name: "2", note: "2", amount: "300.00", tax: "20.00", total: "320.00" },
+            { id: "9", invdate: "2013-09-01", name: "1", note: "1", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "10", invdate: "2013-09-01", name: "test34", note: "test34", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "9", invdate: "2013-09-01", name: "1test", note: "1test", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "11", invdate: "2013-09-01", name: "10", note: "10", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "12", invdate: "2013-09-01", name: "test33", note: "test33", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "13", invdate: "2013-09-01", name: "Test1", note: "Test1", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "14", invdate: "2013-09-01", name: "BTest", note: "BTest", amount: "400.00", tax: "30.00", total: "430.00" },
+            { id: "15", invdate: "2013-09-01", name: "3", note: "3", amount: "400.00", tax: "30.00", total: "430.00" }];
+
+
+            for (var i = 0; i <= mydata.length; i++)
+                jQuery("#list4").jqGrid('addRowData', i + 1, mydata[i]);
+
+        });
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table id="list4"></table>
+    </form>
+</body>
+</html>
