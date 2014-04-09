@@ -1,0 +1,5 @@
+Welcome to NPM!
+Microsoft makes us put this file here, otherwise we can't install.
+See http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package.
+
+You can delete this file now.
