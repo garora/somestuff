@@ -1,7 +1,7 @@
 somestuff
 =========
 
-This repository contains my various stuffs. While I was learning new technologies and things.
+This repository contains my various stuffs. I have added these, while I was learning new technologies and things.
 
 - Complete example of Func Types in C# - to start [for more info: http://gaurav-arora.com/define-func-in-csharp/]
 - Simple WebAPI2 example using MVC pattern (not asp.net MVC framework)-just to start (with client implementation using jquery just for demo)
