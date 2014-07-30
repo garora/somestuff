@@ -48,13 +48,13 @@
   <ItemGroup>
     <Compile Include="DataMigrater.cs" />
     <Compile Include="Extensions\Extensions.cs" />
-    <Compile Include="IServerDataRepository.cs" />
+    <Compile Include="Model\IServerDataRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RawServerDataQuery.cs" />
-    <Compile Include="ServerData.cs" />
-    <Compile Include="ServerDataQuery.cs" />
-    <Compile Include="ServerDataRepository.cs" />
+    <Compile Include="Queries\RawServerDataQuery.cs" />
+    <Compile Include="Model\ServerData.cs" />
+    <Compile Include="Queries\ServerDataQuery.cs" />
+    <Compile Include="Model\ServerDataRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
