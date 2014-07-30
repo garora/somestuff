@@ -19,7 +19,13 @@ namespace LearningSolid
 
             var dataMigrater = new DataMigrater(processedData,repository);
 
+            Console.WriteLine("Data migration started...");
+
             dataMigrater.Migrate();
+
+            Console.WriteLine("Data migration completed...");
+
+            Console.ReadLine();
 
         }
 
