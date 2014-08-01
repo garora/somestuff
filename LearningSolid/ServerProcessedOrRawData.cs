@@ -11,7 +11,6 @@ namespace LearningSolid
     public class ServerProcessedOrRawData
     {
         private readonly IServerDataRepository _repository;
-
         public ServerProcessedOrRawData(IServerDataRepository repository)
         {
             _repository = repository;
@@ -21,9 +20,9 @@ namespace LearningSolid
         {
             var validData = new List<ServerData>();
 
-            var serverData = new ServerProcessedOrRawDataQuery(_repository).Query(startDate, endDate);
+            var serverData = ServerData(startDate, endDate);
 
-            var sourceServerData = new SourceServerDataQuery(new SourceDataRepository()).Query();
+            var sourceServerData = SourceServerData();
 
             foreach (var data in serverData)
             {
@@ -36,6 +35,14 @@ namespace LearningSolid
             return validData;
         }
 
+        private IEnumerable<ServerData> ServerData(DateTime startDate, DateTime endDate)
+        {
+            return new ServerProcessedOrRawDataQuery(_repository).Query(startDate, endDate);
+        }
+        private static IQueryable<SourceServerData> SourceServerData()
+        {
+            return new SourceServerDataQuery(new SourceDataRepository()).Query();
+        }
         private bool IsValid(ServerData data, SourceServerData sourceData)
         {
             var validators = new List<IDataValidator>
