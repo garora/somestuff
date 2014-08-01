@@ -1,12 +1,13 @@
 ﻿using LearningSolid.Model;
 
-namespace LearningSolid.Component.Validators
+namespace LearningSolid.Component.Validators.Data
 {
-    public class TypeValidator : IDataValidator
+    public class IPValidator : IValidator
     {
         public bool Validate(ServerData data, SourceServerData sourceData)
         {
-            return data.Type == sourceData.Type;
+            return data.IP != sourceData.IP;
         }
+
     }
 }

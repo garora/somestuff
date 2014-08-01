@@ -1,8 +1,8 @@
 ﻿using LearningSolid.Model;
 
-namespace LearningSolid.Component.Validators
+namespace LearningSolid.Component.Validators.Data
 {
-    public interface IDataValidator
+    public interface IValidator
     {
         bool Validate(ServerData data, SourceServerData sourceData);
     }

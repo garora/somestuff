@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LearningSolid.Component;
-using LearningSolid.Component.Validators;
+using LearningSolid.Component.Validators.Data;
 using LearningSolid.Model;
 using LearningSolid.Queries;
 
@@ -45,13 +44,13 @@ namespace LearningSolid
         }
         private bool IsValid(ServerData data, SourceServerData sourceData)
         {
-            var validators = new List<IDataValidator>
+            var validators = new List<IValidator>
             {
                 new IPValidator(),
                 new TypeValidator()
             };
 
-            return new DataValidator(validators).Validate(data, sourceData);
+            return new Validator(validators).Validate(data, sourceData);
         }
     }
 }

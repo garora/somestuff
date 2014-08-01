@@ -2,13 +2,13 @@
 using System.Linq;
 using LearningSolid.Model;
 
-namespace LearningSolid.Component.Validators
+namespace LearningSolid.Component.Validators.Data
 {
-    public class DataValidator
+    public class Validator
     {
-        private readonly IEnumerable<IDataValidator> _validators;
+        private readonly IEnumerable<IValidator> _validators;
 
-        public DataValidator(IEnumerable<IDataValidator> validators)
+        public Validator(IEnumerable<IValidator> validators)
         {
             _validators = validators;
         }
