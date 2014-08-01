@@ -12,21 +12,18 @@ namespace LearningSolid.Component
     {
         public bool IsDataValidated(ServerData data, SourceServerData sourceData)
         {
-            IList<IDataValidator> validators = new List<IDataValidator>();
-            validators.Add(new IPValidator());
-            validators.Add(new TypeValidator());
+            var validators = new List<IDataValidator>
+            {
+                new IPValidator(),
+                new TypeValidator()
+            };
 
             return IsDataValid(validators, data, sourceData);
         }
 
-        private bool IsDataValid(IList<IDataValidator> validators, ServerData data, SourceServerData sourceData)
+        private bool IsDataValid(IEnumerable<IDataValidator> validators, ServerData data, SourceServerData sourceData)
         {
-            foreach (var validator in validators)
-            {
-                if (validator.Validate(data, sourceData))
-                    return true;
-            }
-            return false;
+            return validators.Any(validator => validator.Validate(data, sourceData));
         }
     }
 }

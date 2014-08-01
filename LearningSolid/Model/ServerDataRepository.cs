@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LearningSolid.Model;
 
 namespace LearningSolid
 {
     class ServerDataRepository : IServerDataRepository
     {
-        private List<ServerData> _dataList = GetServerData();
+        private readonly List<ServerData> _dataList = GetServerData();
 
         public IEnumerable<ServerData> Get()
         {

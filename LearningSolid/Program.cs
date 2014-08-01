@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LearningSolid.Model;
+using LearningSolid.Queries;
 
 namespace LearningSolid
 {

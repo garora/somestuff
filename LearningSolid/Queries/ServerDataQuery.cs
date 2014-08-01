@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using LearningSolid.Model;
 
-namespace LearningSolid
+namespace LearningSolid.Queries
 {
     public class ServerDataQuery
     {
@@ -15,7 +12,7 @@ namespace LearningSolid
         }
         public IQueryable<ServerData> Query()
         {
-            return Repository.Get().AsQueryable<ServerData>();
+            return Repository.Get().AsQueryable();
         }
 
         public IQueryable<ServerData> ProcessedData()
