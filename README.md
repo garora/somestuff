@@ -9,3 +9,4 @@ This repository contains my various stuffs. I have added these, while I was lear
 - Natural Sorting using jqGrid [for more info: http://gaurav-arora.com/naturalsort-order-using-jqgrid/]
 - Simple Example of angularJS with HTML page using visual Studio 2013 [url: http://gaurav-arora.com/learning-angularjs-step-by-step/]
 - Simple Example of Single Responsibility Principle (Learning S.O.L.I.D Principles) [url: http://gaurav-arora.com/learning-the-s-o-l-i-d-programming-principles-single-responsibility-principle-part-ii/]
+- Simple Example of Open Closed Principle (Learning S.O.L.I.D Principles) [url: http://gaurav-arora.com/learning-the-s-o-l-i-d-programming-principles-open-closed-principle-part-iii/]
