@@ -51,7 +51,7 @@ namespace LearningSolid
                 new TypeValidator()
             };
 
-            return new ValidateData(validators).Validate(data, sourceData);
+            return new DataValidator(validators).Validate(data, sourceData);
         }
     }
 }

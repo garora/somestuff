@@ -4,11 +4,11 @@ using LearningSolid.Model;
 
 namespace LearningSolid.Component.Validators
 {
-    public class ValidateData
+    public class DataValidator
     {
         private readonly IEnumerable<IDataValidator> _validators;
 
-        public ValidateData(IEnumerable<IDataValidator> validators)
+        public DataValidator(IEnumerable<IDataValidator> validators)
         {
             _validators = validators;
         }
