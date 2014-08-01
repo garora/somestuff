@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using LearningSolid.Model;
-using LearningSolid.Queries;
 
 namespace LearningSolid
 {
@@ -31,7 +29,7 @@ namespace LearningSolid
 
         private static IList<ServerData> GetProcessedData(IServerDataRepository repository)
         {
-            return new ServerProcessedOrRawDataQuery(repository).Query(StartDate, EndDate).ToList();
+            return new ServerProcessedOrRawData(repository).GetServerData(StartDate, EndDate);
         }
     }
 }

@@ -11,6 +11,7 @@ namespace LearningSolid.Model
         public bool IsDirty { get; set; }
         public string IP { get; set; }
         public int Type { get; set; }
+        public int RecordIdentifier { get; set; }
 
     }
 }

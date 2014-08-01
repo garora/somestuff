@@ -53,6 +53,8 @@
     <Compile Include="DataMigrater.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Model\IServerDataRepository.cs" />
+    <Compile Include="Model\ISourceDataRepository.cs" />
+    <Compile Include="Model\SourceDataRepository.cs" />
     <Compile Include="Model\SourceServerData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +62,8 @@
     <Compile Include="Model\ServerData.cs" />
     <Compile Include="Queries\ServerDataQuery.cs" />
     <Compile Include="Model\ServerDataRepository.cs" />
+    <Compile Include="Queries\SourceServerDataQuery.cs" />
+    <Compile Include="ServerProcessedOrRawData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
