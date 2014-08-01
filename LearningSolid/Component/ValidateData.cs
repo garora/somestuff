@@ -1,4 +1,5 @@
-﻿using LearningSolid.Model;
+﻿using LearningSolid.Component.Validators;
+using LearningSolid.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,27 +10,23 @@ namespace LearningSolid.Component
 {
     public class ValidateData
     {
-        public void SyncronizeData(ServerData data, SourceServerData sourceData)
+        public bool IsDataValidated(ServerData data, SourceServerData sourceData)
         {
-            if (IsValid(data, sourceData))
-            {
-                //save data
-            }
+            IList<IDataValidator> validators = new List<IDataValidator>();
+            validators.Add(new IPValidator());
+            validators.Add(new TypeValidator());
+
+            return IsDataValid(validators, data, sourceData);
         }
 
-        private bool IsValid(ServerData data, SourceServerData sourceData)
+        private bool IsDataValid(IList<IDataValidator> validators, ServerData data, SourceServerData sourceData)
         {
-            var result = false;
-
-            if (data.Type == sourceData.Type)
-                result = true;
-
-            if (data.IP != sourceData.IP)
-                result = true;
-
-            //other checks/rules to validate incoming data
-
-            return result;
+            foreach (var validator in validators)
+            {
+                if (validator.Validate(data, sourceData))
+                    return true;
+            }
+            return false;
         }
     }
 }

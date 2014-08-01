@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\Validators\IDataValidator.cs" />
     <Compile Include="Component\ValidateData.cs" />
+    <Compile Include="Component\Validators\IPValidator.cs" />
+    <Compile Include="Component\Validators\TypeValidator.cs" />
     <Compile Include="DataMigrater.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Model\IServerDataRepository.cs" />
