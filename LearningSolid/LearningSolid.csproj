@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\ValidateData.cs" />
     <Compile Include="DataMigrater.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Model\IServerDataRepository.cs" />
+    <Compile Include="Model\SourceServerData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\RawServerDataQuery.cs" />
