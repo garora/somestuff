@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using LearningSolid.Component.Validators.Data;
 using LearningSolid.Model;
 
@@ -7,7 +7,7 @@ namespace LearningSolid.Liskov
 {
     public class LSP
     {
-        public class DataBase
+        public class DataBase : IRule, IRepository
         {
             public virtual bool IsValid(ServerData data, SourceServerData sourceData)
             {
@@ -48,33 +48,22 @@ namespace LearningSolid.Liskov
             }
         }
 
-        public class LocalDB : DataBase
+        public class LocalDB : IRule
         {
-            public override bool IsValid(ServerData data, SourceServerData sourceData)
+            public bool IsValid(ServerData data, SourceServerData sourceData)
             {
-                return base.IsValid(data, sourceData);
-            }
-
-            public override void Save()
-            {
-                throw new Exception("Local Data should not be saved!");
+                return new Validator(new List<IValidator>()).Validate(data, sourceData);
             }
         }
 
-        public void Execute()
+        public void Execute(ServerData data, SourceServerData sourceData)
         {
-            var dataBases = new List<DataBase> {new ProdDB(), new QADB(), new LocalDB()};
-            
-            foreach (var dataBase in dataBases)
+            var dataBases = new List<IRepository> { new ProdDB(), new QADB() };
+
+            foreach (var dataBase in dataBases.Where(dataBase => ((IRule)dataBase).IsValid(data, sourceData)))
             {
                 dataBase.Save();
             }
-            
-            DataBase pDataBase = new ProdDB();
-            DataBase qDataBase = new QADB();
-            DataBase lDataBase = new LocalDB();
-            
-            
         }
     }
 }
