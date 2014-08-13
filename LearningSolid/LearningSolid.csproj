@@ -52,6 +52,8 @@
     <Compile Include="Component\Validators\Data\TypeValidator.cs" />
     <Compile Include="DataMigrater.cs" />
     <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="InterfaceSegregationPrinciple\IReport.cs" />
+    <Compile Include="InterfaceSegregationPrinciple\ISP.cs" />
     <Compile Include="Liskov\IRepository.cs" />
     <Compile Include="Liskov\IRule.cs" />
     <Compile Include="Liskov\LSP.cs" />
