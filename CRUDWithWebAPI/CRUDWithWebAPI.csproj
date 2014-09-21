@@ -157,6 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="DB Scripts\CreateDatabase.sql" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.js" />
     <Content Include="scripts\ai.min.js" />
