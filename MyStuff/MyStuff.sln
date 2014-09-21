@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStuff", "MyStuff.csproj", "{58657698-B216-42F9-BF35-9B85C58D58A7}"
 EndProject
@@ -19,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simpleangularjs", "..\simpleangularjs\simpleangularjs.csproj", "{8803FC5A-D37E-4CC4-BA44-01B2D5B7CBC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSolid", "..\LearningSolid\LearningSolid.csproj", "{DCC9B409-C274-40CC-9996-A15BCE3F1EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDWithWebAPI", "..\CRUDWithWebAPI\CRUDWithWebAPI.csproj", "{BCE3FC5D-671B-45B6-958E-04BB615610E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,10 @@ Global
 		{DCC9B409-C274-40CC-9996-A15BCE3F1EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCC9B409-C274-40CC-9996-A15BCE3F1EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCC9B409-C274-40CC-9996-A15BCE3F1EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
