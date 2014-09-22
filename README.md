@@ -10,3 +10,4 @@ This repository contains my various stuffs. I have added these, while I was lear
 - Simple Example of angularJS with HTML page using visual Studio 2013 [url: http://gaurav-arora.com/learning-angularjs-step-by-step/]
 - Simple Example of Single Responsibility Principle (Learning S.O.L.I.D Principles) [url: http://gaurav-arora.com/learning-the-s-o-l-i-d-programming-principles-single-responsibility-principle-part-ii/]
 - Simple Example of Open Closed Principle (Learning S.O.L.I.D Principles) [url: http://gaurav-arora.com/learning-the-s-o-l-i-d-programming-principles-open-closed-principle-part-iii/]
+- CRUD operation for asp.net WEB Api using FluentNHibernate and repository pattern [url: http://gaurav-arora.com/crud-operations-with-asp-net-web-api-using-fluentnhibernate-repository-pattern/ ] - Demo-[url: http://crudwithwebapi.azurewebsites.net/]
