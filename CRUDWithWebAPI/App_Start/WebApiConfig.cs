@@ -14,12 +14,12 @@ namespace CRUDWithWebAPI
             );
 
             config.Routes.MapHttpRoute(
-                name: "ProductByType",
+                name: "ServerDataByType",
                 routeTemplate: "api/{controller}/type/{type}"
             );
 
             config.Routes.MapHttpRoute(
-                name: "ProductByIP",
+                name: "ServerDataByIP",
                 routeTemplate: "api/{controller}/ip/{ip}"
             );
 
