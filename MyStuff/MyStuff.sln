@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSolid", "..\Learnin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDWithWebAPI", "..\CRUDWithWebAPI\CRUDWithWebAPI.csproj", "{BCE3FC5D-671B-45B6-958E-04BB615610E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consumewebapiusingrestsharp", "..\consumewebapiusingrestsharp\consumewebapiusingrestsharp.csproj", "{A381B711-194D-4E84-9AA0-E575ADAD42D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
