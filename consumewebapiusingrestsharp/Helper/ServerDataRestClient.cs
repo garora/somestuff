@@ -22,28 +22,28 @@ namespace consumewebapiusingrestsharp.Helper
         public IEnumerable<ServerData> GetAll()
         {
             var request = new RestRequest("api/serverdata", Method.GET);
+            request.RequestFormat = DataFormat.Json;
 
             var response = client.Execute<List<ServerData>>(request);
 
-            request.OnBeforeDeserialization = reponse => { response.ContentType = "application/json"; };
-
-            return response.Data;
+            return response.Data == null ? throw new Exception(response.ErrorMessage) : response.Data;
         }
 
         public ServerData GetById(int id)
         {
-            var request = new RestRequest("api/serverdata", Method.GET);
-            request.AddParameter("id", id);
+            var request = new RestRequest("api/serverdata/{id}", Method.GET);
+            request.RequestFormat = DataFormat.Json;
+            request.AddParameter("id", id, ParameterType.UrlSegment);
 
             var response = client.Execute<ServerData>(request);
 
-            return response.Data;
+            return response.Data == null ? throw new Exception(response.ErrorMessage) : response.Data;
         }
 
         public ServerData GetByType(int type)
         {
-            var request = new RestRequest("api/serverdata/type", Method.GET);
-            request.AddParameter("datatype", type);
+            var request = new RestRequest("api/serverdata/type/{datatype}", Method.GET);
+            request.AddParameter("datatype", type, ParameterType.UrlSegment);
 
             var response = client.Execute<ServerData>(request);
 
@@ -52,8 +52,8 @@ namespace consumewebapiusingrestsharp.Helper
 
         public ServerData GetByIP(int ip)
         {
-            var request = new RestRequest("api/serverdata/ip", Method.GET);
-            request.AddParameter("ip", ip);
+            var request = new RestRequest("api/serverdata/ip/{ip}", Method.GET);
+            request.AddParameter("ip", ip, ParameterType.UrlSegment);
 
             var response = client.Execute<ServerData>(request);
 
@@ -74,8 +74,8 @@ namespace consumewebapiusingrestsharp.Helper
 
         public void Update(ServerData serverData)
         {
-            var request = new RestRequest("api/serverdata", Method.PUT);
-            request.AddParameter("id", serverData.Id);
+            var request = new RestRequest("api/serverdata/{id}", Method.PUT);
+            request.AddParameter("id", serverData.Id, ParameterType.UrlSegment);
             request.AddBody(serverData);
 
             var response = client.Execute<ServerData>(request);
@@ -86,8 +86,8 @@ namespace consumewebapiusingrestsharp.Helper
 
         public void Delete(int id)
         {
-            var request = new RestRequest("api/serverdata", Method.DELETE);
-            request.AddParameter("id", id);
+            var request = new RestRequest("api/serverdata/{id}", Method.DELETE);
+            request.AddParameter("id", id, ParameterType.UrlSegment);
 
             var response = client.Execute<ServerData>(request);
 
