@@ -26,7 +26,10 @@ namespace consumewebapiusingrestsharp.Helper
 
             var response = client.Execute<List<ServerData>>(request);
 
-            return response.Data == null ? throw new Exception(response.ErrorMessage) : response.Data;
+            if (response.Data == null)
+                throw new Exception(response.ErrorMessage);
+
+            return response.Data;
         }
 
         public ServerData GetById(int id)
@@ -37,7 +40,10 @@ namespace consumewebapiusingrestsharp.Helper
 
             var response = client.Execute<ServerData>(request);
 
-            return response.Data == null ? throw new Exception(response.ErrorMessage) : response.Data;
+            if (response.Data == null)
+                throw new Exception(response.ErrorMessage);
+
+            return response.Data;
         }
 
         public ServerData GetByType(int type)
