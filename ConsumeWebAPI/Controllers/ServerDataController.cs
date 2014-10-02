@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using ConsumeWebAPI.Helper;
+using ConsumeWebAPI.Models;
 
 namespace ConsumeWebAPI.Controllers
 {
@@ -34,12 +35,11 @@ namespace ConsumeWebAPI.Controllers
         // POST: /ServerData/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ServerDataModel serverData)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                RestClient.Add(serverData);
                 return RedirectToAction("Index");
             }
             catch
@@ -60,11 +60,11 @@ namespace ConsumeWebAPI.Controllers
         // POST: /ServerData/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(ServerDataModel serverData)
         {
             try
             {
-                // TODO: Add update logic here
+                RestClient.Update(serverData);
 
                 return RedirectToAction("Index");
             }
@@ -86,11 +86,11 @@ namespace ConsumeWebAPI.Controllers
         // POST: /ServerData/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(ServerDataModel serverData)
         {
             try
             {
-                // TODO: Add delete logic here
+                RestClient.Delete(serverData.Id);
 
                 return RedirectToAction("Index");
             }

@@ -19,8 +19,7 @@ namespace ConsumeWebAPI.Helper
 
         public IEnumerable<ServerDataModel> GetAll()
         {
-            var request = new RestRequest("api/serverdata", Method.GET);
-            request.RequestFormat = DataFormat.Json;
+            var request = new RestRequest("api/serverdata", Method.GET) {RequestFormat = DataFormat.Json};
 
             var response = _client.Execute<List<ServerDataModel>>(request);
 
@@ -32,12 +31,10 @@ namespace ConsumeWebAPI.Helper
 
         public ServerDataModel GetById(int id)
         {
-            var request = new RestRequest("api/serverdata/{id}", Method.GET);
+            var request = new RestRequest("api/serverdata/{id}", Method.GET) {RequestFormat = DataFormat.Json};
 
             request.AddParameter("id", id, ParameterType.UrlSegment);
-
-            request.RequestFormat = DataFormat.Json;
-
+            
             var response = _client.Execute<ServerDataModel>(request);
 
             if (response.Data == null)
@@ -48,7 +45,11 @@ namespace ConsumeWebAPI.Helper
 
         public ServerDataModel GetByType(int type)
         {
-            var request = new RestRequest("api/serverdata/type/{datatype}", Method.GET);
+            var request = new RestRequest("api/serverdata/type/{datatype}", Method.GET)
+            {
+                RequestFormat = DataFormat.Json
+            };
+
             request.AddParameter("datatype", type, ParameterType.UrlSegment);
 
             var response = _client.Execute<ServerDataModel>(request);
@@ -58,7 +59,7 @@ namespace ConsumeWebAPI.Helper
 
         public ServerDataModel GetByIP(int ip)
         {
-            var request = new RestRequest("api/serverdata/ip/{ip}", Method.GET);
+            var request = new RestRequest("api/serverdata/ip/{ip}", Method.GET) {RequestFormat = DataFormat.Json};
             request.AddParameter("ip", ip, ParameterType.UrlSegment);
 
             var response = _client.Execute<ServerDataModel>(request);
@@ -68,7 +69,7 @@ namespace ConsumeWebAPI.Helper
 
         public void Add(ServerDataModel serverData)
         {
-            var request = new RestRequest("api/serverdata", Method.POST);
+            var request = new RestRequest("api/serverdata", Method.POST) {RequestFormat = DataFormat.Json};
             request.AddBody(serverData);
 
             var response = _client.Execute<ServerDataModel>(request);
@@ -80,7 +81,7 @@ namespace ConsumeWebAPI.Helper
 
         public void Update(ServerDataModel serverData)
         {
-            var request = new RestRequest("api/serverdata/{id}", Method.PUT);
+            var request = new RestRequest("api/serverdata/{id}", Method.PUT) {RequestFormat = DataFormat.Json};
             request.AddParameter("id", serverData.Id, ParameterType.UrlSegment);
             request.AddBody(serverData);
 
@@ -94,7 +95,7 @@ namespace ConsumeWebAPI.Helper
         {
             var request = new RestRequest("api/serverdata/{id}", Method.DELETE);
             request.AddParameter("id", id, ParameterType.UrlSegment);
-
+           
             var response = _client.Execute<ServerDataModel>(request);
 
             if (response.StatusCode == HttpStatusCode.NotFound)
