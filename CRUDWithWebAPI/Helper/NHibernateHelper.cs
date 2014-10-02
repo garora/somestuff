@@ -17,7 +17,7 @@ namespace CRUDWithWebAPI.Helper
 
 
         private static ISessionFactory _sessionFactory;
-        const string connectionString = @"data source=GAURAV-ARORA;initial catalog=crudwepapi;integrated security=True;";
+        const string ConnectionString = @"data source=GAURAV-ARORA;initial catalog=crudwepapi;integrated security=True;";
         private static ISessionFactory SessionFactory
         {
             get
@@ -32,7 +32,7 @@ namespace CRUDWithWebAPI.Helper
         private static void CreateSessionFactory()
         {
             _sessionFactory = Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(connectionString).ShowSql)
+                .Database(MsSqlConfiguration.MsSql2008.ConnectionString(ConnectionString).ShowSql)
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<ServerData>())
                 .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(false, false))
                 .BuildSessionFactory();

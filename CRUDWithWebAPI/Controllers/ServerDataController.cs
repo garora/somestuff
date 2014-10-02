@@ -11,16 +11,16 @@ namespace CRUDWithWebAPI.Controllers
 {
     public class ServerDataController : ApiController
     {
-        static readonly IServerDataRepository serverDataRepository = new ServerDataRepository();
+        static readonly IServerDataRepository ServerDataRepository = new ServerDataRepository();
 
         public IEnumerable<ServerData> GetServerData()
         {
-            return serverDataRepository.GetAll();
+            return ServerDataRepository.GetAll();
         }
 
         public ServerData GetServerDataById(int id)
         {
-            var serverData = serverDataRepository.Get(id);
+            var serverData = ServerDataRepository.Get(id);
 
             if (serverData == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -30,12 +30,12 @@ namespace CRUDWithWebAPI.Controllers
 
         public IEnumerable<ServerData> GetServerDataByType(int type)
         {
-            return serverDataRepository.GetAll().Where(d => d.Type == type);
+            return ServerDataRepository.GetAll().Where(d => d.Type == type);
         }
 
         public IEnumerable<ServerData> GetServerDataByIP(string ip)
         {
-            return serverDataRepository.GetAll().Where(d => d.IP.ToLower() == ip.ToLower());
+            return ServerDataRepository.GetAll().Where(d => d.IP.ToLower() == ip.ToLower());
         }
 
         //Why commented this - explained in the article
@@ -46,9 +46,9 @@ namespace CRUDWithWebAPI.Controllers
 
         public HttpResponseMessage PostServerData(ServerData serverData)
         {
-            serverData = serverDataRepository.Add(serverData);
+            serverData = ServerDataRepository.Add(serverData);
 
-            var response = Request.CreateResponse<ServerData>(HttpStatusCode.Created, serverData);
+            var response = Request.CreateResponse(HttpStatusCode.Created, serverData);
 
             var uri = Url.Link("DefaultApi", new { id = serverData.Id });
             response.Headers.Location = new Uri(uri);
@@ -61,17 +61,17 @@ namespace CRUDWithWebAPI.Controllers
         {
             serverData.Id = id;
 
-            if (!serverDataRepository.Update(serverData))
+            if (!ServerDataRepository.Update(serverData))
                 throw new HttpResponseException(HttpStatusCode.NotFound);
         }
 
-        public void DeletServerData(int id)
+        public void DeleteServerData(int id)
         {
-            var serverData = serverDataRepository.Get(id);
+            var serverData = ServerDataRepository.Get(id);
 
             if (serverData == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
-            serverDataRepository.Delete(id);
+            ServerDataRepository.Delete(id);
         }
     }
 }
