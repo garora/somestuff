@@ -35,8 +35,10 @@ namespace consumewebapiusingrestsharp.Helper
         public ServerData GetById(int id)
         {
             var request = new RestRequest("api/serverdata/{id}", Method.GET);
-            request.RequestFormat = DataFormat.Json;
+
             request.AddParameter("id", id, ParameterType.UrlSegment);
+
+            request.RequestFormat = DataFormat.Json;
 
             var response = client.Execute<ServerData>(request);
 

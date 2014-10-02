@@ -1,0 +1,55 @@
+﻿@model ConsumeWebAPI.Models.ServerDataModel
+
+    @{
+        ViewBag.Title = "Details";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Consume Asp.net WebAPI :: Details</h2>
+<article>
+    <p>
+        Here you can manipulat server data.
+    </p>
+
+    <fieldset>
+        <legend>SerializeAsAttribute</legend>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Id)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.InitialDate)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.OrderNumber)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.IsDirty)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.IP)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</article>
+
+<aside>
+    <h3>Navigation</h3>
+    <p>
+        From here you can navigate other parts of app.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Manipulate Data", "Index", "ServerData")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

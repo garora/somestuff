@@ -7,13 +7,13 @@ namespace consumewebapiusingrestsharp.Models
 {
     public class ServerData
     {
-        public virtual int Id { get; set; }
-        public virtual DateTime InitialDate { get; set; }
-        public virtual DateTime EndDate { get; set; }
-        public virtual int OrderNumber { get; set; }
-        public virtual bool IsDirty { get; set; }
-        public virtual string IP { get; set; }
-        public virtual int Type { get; set; }
-        public virtual int RecordIdentifier { get; set; }
+        public int Id { get; set; }
+        public DateTime InitialDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public int OrderNumber { get; set; }
+        public bool IsDirty { get; set; }
+        public string IP { get; set; }
+        public int Type { get; set; }
+        public int RecordIdentifier { get; set; }
     }
 }

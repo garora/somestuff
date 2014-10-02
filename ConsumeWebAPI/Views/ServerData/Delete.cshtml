@@ -1,0 +1,88 @@
+﻿@model ConsumeWebAPI.Models.ServerDataModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Consume Asp.net WebAPI :: Delete</h2>
+
+<article>
+    <p>
+        Here you can manipulat server data.
+    </p>
+    <h3>Are you sure you want to delete this?</h3>
+    <fieldset>
+        <legend>ServerDataModel</legend>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.InitialDate)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.InitialDate)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.EndDate)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.EndDate)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.OrderNumber)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.OrderNumber)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.IsDirty)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.IsDirty)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.IP)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.IP)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Type)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Type)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.RecordIdentifier)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.RecordIdentifier)
+        </div>
+    </fieldset>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <p>
+            <input type="submit" value="Delete" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    }
+</article>
+
+<aside>
+    <h3>Navigation</h3>
+    <p>
+        From here you can navigate other parts of app.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Manipulate Data", "Index", "ServerData")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

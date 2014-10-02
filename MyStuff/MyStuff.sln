@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningSolid", "..\Learnin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDWithWebAPI", "..\CRUDWithWebAPI\CRUDWithWebAPI.csproj", "{BCE3FC5D-671B-45B6-958E-04BB615610E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consumewebapiusingrestsharp", "..\consumewebapiusingrestsharp\consumewebapiusingrestsharp.csproj", "{A381B711-194D-4E84-9AA0-E575ADAD42D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumeWebAPI", "..\ConsumeWebAPI\ConsumeWebAPI.csproj", "{3653C307-FC36-4702-9BCD-3C29B1D1DF35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,10 +54,10 @@ Global
 		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCE3FC5D-671B-45B6-958E-04BB615610E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A381B711-194D-4E84-9AA0-E575ADAD42D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3653C307-FC36-4702-9BCD-3C29B1D1DF35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3653C307-FC36-4702-9BCD-3C29B1D1DF35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3653C307-FC36-4702-9BCD-3C29B1D1DF35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3653C307-FC36-4702-9BCD-3C29B1D1DF35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
