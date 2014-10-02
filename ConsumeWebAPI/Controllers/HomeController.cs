@@ -20,7 +20,7 @@ namespace ConsumeWebAPI.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "ontact page.";
+            ViewBag.Message = "Contact page.";
 
             return View();
         }

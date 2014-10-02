@@ -18,11 +18,9 @@
         @Html.ValidationSummary(true)
 
         <fieldset>
-            <legend>ServerDataModel</legend>
-
             @Html.HiddenFor(model => model.Id)
 
-            <div class="editor-label">
+            <div class="label">
                 @Html.LabelFor(model => model.InitialDate)
             </div>
             <div class="editor-field">
@@ -30,7 +28,7 @@
                 @Html.ValidationMessageFor(model => model.InitialDate)
             </div>
 
-            <div class="editor-label">
+            <div class="label">
                 @Html.LabelFor(model => model.EndDate)
             </div>
             <div class="editor-field">
@@ -38,7 +36,7 @@
                 @Html.ValidationMessageFor(model => model.EndDate)
             </div>
 
-            <div class="editor-label">
+            <div class="label">
                 @Html.LabelFor(model => model.OrderNumber)
             </div>
             <div class="editor-field">
@@ -46,7 +44,7 @@
                 @Html.ValidationMessageFor(model => model.OrderNumber)
             </div>
 
-            <div class="editor-label">
+            <div class="label">
                 @Html.LabelFor(model => model.IsDirty)
             </div>
             <div class="editor-field">
@@ -54,7 +52,7 @@
                 @Html.ValidationMessageFor(model => model.IsDirty)
             </div>
 
-            <div class="editor-label">
+            <div class="label">
                 @Html.LabelFor(model => model.IP)
             </div>
             <div class="editor-field">
@@ -62,7 +60,7 @@
                 @Html.ValidationMessageFor(model => model.IP)
             </div>
 
-            <div class="editor-label">
+            <div class="label">
                 @Html.LabelFor(model => model.Type)
             </div>
             <div class="editor-field">
@@ -70,7 +68,7 @@
                 @Html.ValidationMessageFor(model => model.Type)
             </div>
 
-            <div class="editor-label">
+            <div class="label">
                 @Html.LabelFor(model => model.RecordIdentifier)
             </div>
             <div class="editor-field">
@@ -79,14 +77,12 @@
             </div>
 
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Save" /> @Html.ActionLink("Cancel", "Index", null, new { @class = "actionlinkbutton" })
             </p>
         </fieldset>
     }
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
+
 </article>
 
 <aside>

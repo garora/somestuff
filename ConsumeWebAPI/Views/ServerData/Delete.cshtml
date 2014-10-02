@@ -15,49 +15,49 @@
     <fieldset>
         <legend>ServerDataModel</legend>
 
-        <div class="display-label">
+        <div class="label">
             @Html.DisplayNameFor(model => model.InitialDate)
         </div>
         <div class="display-field">
             @Html.DisplayFor(model => model.InitialDate)
         </div>
 
-        <div class="display-label">
+        <div class="label">
             @Html.DisplayNameFor(model => model.EndDate)
         </div>
         <div class="display-field">
             @Html.DisplayFor(model => model.EndDate)
         </div>
 
-        <div class="display-label">
+        <div class="label">
             @Html.DisplayNameFor(model => model.OrderNumber)
         </div>
         <div class="display-field">
             @Html.DisplayFor(model => model.OrderNumber)
         </div>
 
-        <div class="display-label">
+        <div class="label">
             @Html.DisplayNameFor(model => model.IsDirty)
         </div>
         <div class="display-field">
-            @Html.DisplayFor(model => model.IsDirty)
+            @string.Format(Model.IsDirty ? "Yes" : "No")
         </div>
 
-        <div class="display-label">
+        <div class="label">
             @Html.DisplayNameFor(model => model.IP)
         </div>
         <div class="display-field">
             @Html.DisplayFor(model => model.IP)
         </div>
 
-        <div class="display-label">
+        <div class="label">
             @Html.DisplayNameFor(model => model.Type)
         </div>
         <div class="display-field">
             @Html.DisplayFor(model => model.Type)
         </div>
 
-        <div class="display-label">
+        <div class="label">
             @Html.DisplayNameFor(model => model.RecordIdentifier)
         </div>
         <div class="display-field">
@@ -68,8 +68,7 @@
     {
         @Html.AntiForgeryToken()
         <p>
-            <input type="submit" value="Delete" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Delete" /> @Html.ActionLink("Cancel", "Index", null, new { @class = "actionlinkbutton" })
         </p>
     }
 </article>

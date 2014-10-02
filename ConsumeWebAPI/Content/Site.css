@@ -306,12 +306,12 @@ ol.round {
 /* content */
 article {
     float: left;
-    width: 70%;
+    width: 80%;
 }
 
 aside {
     float: right;
-    width: 25%;
+    width: 20%;
 }
 
     aside ul {
@@ -460,6 +460,18 @@ textarea {
         padding: 7px;
         margin-right: 8px;
         width: auto;
+    }
+
+     .actionlinkbutton {
+        background-color: #d3dce0;
+        border: 1px solid #787878;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 7px;
+        margin-right: 8px;
+        width: auto;
+         text-decoration: none;
     }
 
     td input[type="submit"],
