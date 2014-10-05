@@ -1,7 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Web.Services.Description;
-using System.Web.UI.WebControls;
 
 namespace ConsumeWebAPI.Models
 {
